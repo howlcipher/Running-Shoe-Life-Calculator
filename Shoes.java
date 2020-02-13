@@ -1,40 +1,45 @@
 public class Shoes {
-    private String brand;
-    private String model;
-    private int lifeOfShoe;
+  private String brand;
+  private String model;
+  private int lifeOfShoe;
+  public String[] shoeBrands = {"Adidas", "Asics", "Brooks", "Mizuno", "New Balance", "Nike", "Reebok", "Saucony"};
 
-public Shoes(String x, String y, int z) {
-  this.setBrand(x);
-  this.setModel(y);
-  this.setLifeOfShoe(z);
-}
+  public Shoes(int x, String y, int z) {
+    this.setBrand(x);
+    this.setModel(y);
+    this.setLifeOfShoe(z);
+  }
 
 
-//Brand getter
-public String getBrand() {
-  return brand;
-}
-//Brand setter
-public void setBrand(String newBrand) {
-  this.brand = newBrand;
-}
+  // Brand getter
+  public String getBrand() {
+    return brand;
+  }
 
-//Model getter
-public String getModel() {
-  return model;
-}
-//Model setter
-public void setModel(String newModel) {
-  this.model = newModel;
-}
+  // Brand setter
+  public void setBrand(int newBrand) {
+    String brand = shoeBrands[newBrand - 1];
+    this.brand = brand;
+  }
 
-//Shoe life getter
-public int getlifeOfShoe() {
-  return lifeOfShoe;
-}
-//Shoe life setter
-public void setLifeOfShoe(int newLifeOfShoe) {
-  this.lifeOfShoe = newLifeOfShoe;
-}
+  // Model getter
+  public String getModel() {
+    return model;
+  }
+
+  // Model setter
+  public void setModel(String newModel) {
+    this.model = newModel;
+  }
+
+  // Shoe life getter
+  public int getlifeOfShoe() {
+    return lifeOfShoe;
+  }
+
+  // Shoe life setter
+  public void setLifeOfShoe(int newLifeOfShoe) {
+    this.lifeOfShoe = newLifeOfShoe;
+  }
 
 }
